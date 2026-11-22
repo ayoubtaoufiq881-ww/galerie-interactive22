@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie de photos accessible</title>
+    <link rel="stylesheet" href="gallery.css">
+    <script src="gallery.js"></script>
+</head>
+<body onload="addTabIndex()">
+
+    <h1>Ma galerie de photos interactive</h1>
+
+    <div id="image">
+        Survolez ou sélectionnez une image ci-dessous pour l'afficher ici.
+    </div>
+
+    <div class="gallery">
+        <img class="preview" 
+             alt="Montagnes enneigées au lever du soleil" 
+             src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%231d3557%22/%3E%0A%20%20%3Ccircle%20cx%3D%22460%22%20cy%3D%22110%22%20r%3D%2245%22%20fill%3D%22%23a8dadc%22/%3E%0A%20%20%3Cpolygon%20points%3D%220%2C400%20180%2C210%20340%2C340%20450%2C230%20600%2C400%22%20fill%3D%22%23a8dadc%22%20opacity%3D%220.85%22/%3E%0A%20%20%3Ctext%20x%3D%22300%22%20y%3D%2275%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2226%22%20font-weight%3D%22bold%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%3EMontagnes%20enneig%C3%A9es%3C/text%3E%0A%3C/svg%3E" 
+             onmouseover="upDate(this)" 
+             onmouseleave="unDo()" 
+             onfocus="upDate(this)" 
+             onblur="unDo()">
+
+        <img class="preview" 
+             alt="Forêt dense traversée par un sentier" 
+             src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%232d6a4f%22/%3E%0A%20%20%3Ccircle%20cx%3D%22460%22%20cy%3D%22110%22%20r%3D%2245%22%20fill%3D%22%2395d5b2%22/%3E%0A%20%20%3Cpolygon%20points%3D%220%2C400%20180%2C210%20340%2C340%20450%2C230%20600%2C400%22%20fill%3D%22%2395d5b2%22%20opacity%3D%220.85%22/%3E%0A%20%20%3Ctext%20x%3D%22300%22%20y%3D%2275%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2226%22%20font-weight%3D%22bold%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%3EFor%C3%AAt%20dense%3C/text%3E%0A%3C/svg%3E" 
+             onmouseover="upDate(this)" 
+             onmouseleave="unDo()" 
+             onfocus="upDate(this)" 
+             onblur="unDo()">
+
+        <img class="preview" 
+             alt="Plage de sable fin avec vagues calmes" 
+             src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%230077b6%22/%3E%0A%20%20%3Ccircle%20cx%3D%22460%22%20cy%3D%22110%22%20r%3D%2245%22%20fill%3D%22%23ffd166%22/%3E%0A%20%20%3Cpolygon%20points%3D%220%2C400%20180%2C210%20340%2C340%20450%2C230%20600%2C400%22%20fill%3D%22%23ffd166%22%20opacity%3D%220.85%22/%3E%0A%20%20%3Ctext%20x%3D%22300%22%20y%3D%2275%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2226%22%20font-weight%3D%22bold%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%3EPlage%20de%20sable%20fin%3C/text%3E%0A%3C/svg%3E" 
+             onmouseover="upDate(this)" 
+             onmouseleave="unDo()" 
+             onfocus="upDate(this)" 
+             onblur="unDo()">
+
+        <img class="preview" 
+             alt="Rivière paisible bordée d'arbres en automne" 
+             src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%237f4f24%22/%3E%0A%20%20%3Ccircle%20cx%3D%22460%22%20cy%3D%22110%22%20r%3D%2245%22%20fill%3D%22%23e09f3e%22/%3E%0A%20%20%3Cpolygon%20points%3D%220%2C400%20180%2C210%20340%2C340%20450%2C230%20600%2C400%22%20fill%3D%22%23e09f3e%22%20opacity%3D%220.85%22/%3E%0A%20%20%3Ctext%20x%3D%22300%22%20y%3D%2275%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2226%22%20font-weight%3D%22bold%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%3ERivi%C3%A8re%20en%20automne%3C/text%3E%0A%3C/svg%3E" 
+             onmouseover="upDate(this)" 
+             onmouseleave="unDo()" 
+             onfocus="upDate(this)" 
+             onblur="unDo()">
+
+        <img class="preview" 
+             alt="Ciel étoilé au-dessus d'un lac calme" 
+             src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%23240046%22/%3E%0A%20%20%3Ccircle%20cx%3D%22460%22%20cy%3D%22110%22%20r%3D%2245%22%20fill%3D%22%23c77dff%22/%3E%0A%20%20%3Cpolygon%20points%3D%220%2C400%20180%2C210%20340%2C340%20450%2C230%20600%2C400%22%20fill%3D%22%23c77dff%22%20opacity%3D%220.85%22/%3E%0A%20%20%3Ctext%20x%3D%22300%22%20y%3D%2275%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2226%22%20font-weight%3D%22bold%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%3ECiel%20%C3%A9toil%C3%A9%3C/text%3E%0A%3C/svg%3E" 
+             onmouseover="upDate(this)" 
+             onmouseleave="unDo()" 
+             onfocus="upDate(this)" 
+             onblur="unDo()">
+
+        <img class="preview" 
+             alt="Cascade entourée de rochers moussus" 
+             src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22600%22%20height%3D%22400%22%20viewBox%3D%220%200%20600%20400%22%3E%0A%20%20%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%23386641%22/%3E%0A%20%20%3Ccircle%20cx%3D%22460%22%20cy%3D%22110%22%20r%3D%2245%22%20fill%3D%22%23a7c957%22/%3E%0A%20%20%3Cpolygon%20points%3D%220%2C400%20180%2C210%20340%2C340%20450%2C230%20600%2C400%22%20fill%3D%22%23a7c957%22%20opacity%3D%220.85%22/%3E%0A%20%20%3Ctext%20x%3D%22300%22%20y%3D%2275%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2226%22%20font-weight%3D%22bold%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%3ECascade%20et%20rochers%3C/text%3E%0A%3C/svg%3E" 
+             onmouseover="upDate(this)" 
+             onmouseleave="unDo()" 
+             onfocus="upDate(this)" 
+             onblur="unDo()">
+    </div>
+
+</body>
+</html>
